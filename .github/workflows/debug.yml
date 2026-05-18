@@ -32,7 +32,7 @@ jobs:
         if [ -f gradle.properties ]; then
           sed -i 's/^org.gradle.java.home=/# &/' gradle.properties || true
         fi
-        gradle assembleDebug --no-daemon -Dorg.gradle.java.home=$JAVA_HOME
+        gradle assembleFreeDebug --no-daemon -Dorg.gradle.java.home=$JAVA_HOME
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
